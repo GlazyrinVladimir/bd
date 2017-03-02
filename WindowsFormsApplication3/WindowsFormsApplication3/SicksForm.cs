@@ -124,7 +124,7 @@ namespace WindowsFormsApplication3
             path = Convert.ToString(dataGridView1.CurrentRow.Cells[6].Value);
             if (path != "" && passport != "")
             {
-                Form1 form = new Form1(text, path, passport);
+                Form2 form = new Form2(text, path, passport);
                 form.ShowDialog();
             }
         }

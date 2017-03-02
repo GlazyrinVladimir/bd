@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.84056cm</Width>
+              <Width>4.06986cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.84056cm</Width>
+              <Width>4.06986cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.84056cm</Width>
+              <Width>4.06986cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -254,7 +254,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Height>1.2cm</Height>
-        <Width>11.52167cm</Width>
+        <Width>12.20958cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -283,7 +283,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>6d14b386-066e-491e-a782-df613d629c3f</rd:DataSourceID>
+      <rd:DataSourceID>e07f8e5c-fb90-4275-8a9f-369e16afe9d1</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -308,7 +308,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>_4_2DataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Vovchik\Documents\Visual Studio 2015\Projects\WindowsFormsApplication3\WindowsFormsApplication3\_4_2DataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\_4_2DataSet.xsd</rd:SchemaPath>
         <rd:TableName>Больные</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -317,5 +317,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>4ffcfa65-c2ce-48cb-b01f-5041a6563eff</rd:ReportID>
+  <rd:ReportID>3f3bff79-7a3f-4783-b668-6dcc2b8cb736</rd:ReportID>
 </Report>

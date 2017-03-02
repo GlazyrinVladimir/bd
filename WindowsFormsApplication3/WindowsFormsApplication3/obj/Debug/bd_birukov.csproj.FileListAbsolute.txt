@@ -1,0 +1,23 @@
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\4.2.accdb
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\bd.accdb
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\Microsoft Office Access 2007 База данных.accdb
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.AddSickForm.resources
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.AddMedicineUse.resources
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.AddUsage.resources
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Medicine.resources
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.MedicineUse.resources
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.SicksForm.resources
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Usage.resources
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\bd_birukov.csproj.GenerateResource.Cache
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\RdlCompile.cache
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\RdlCompile.compiled
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\bd_birukov.csprojResolveAssemblyReference.cache
+C:\бд гоша\на гит\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form2.resources

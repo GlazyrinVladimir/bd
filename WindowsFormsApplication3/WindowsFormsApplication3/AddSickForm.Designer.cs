@@ -98,6 +98,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(139, 124);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // closeButton
             // 
@@ -189,7 +190,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddSickForm";
-            this.Text = "Form1";
+            this.Text = "Добавить больного";
+            this.Load += new System.EventHandler(this.AddSickForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

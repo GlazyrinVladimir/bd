@@ -201,25 +201,25 @@ namespace WindowsFormsApplication3
             dataGridView2.Columns.Clear();
             if (number != "")
             {
-                oleDbConnection1.Open();
+                oleDbConnection2.Open();
                 try
                 {
                     string myQuery = "SELECT * FROM [НазначениеЛекарств] WHERE [idЛекарств] LIKE " + number + ";";
-                    OleDbCommand myCommand = new OleDbCommand(myQuery, oleDbConnection1);
+                    OleDbCommand myCommand = new OleDbCommand(myQuery, oleDbConnection2);
 
                     OleDbDataReader myReader;
                     myReader = myCommand.ExecuteReader();
                     myReader.Close();
-                    oleDbDataAdapter1.SelectCommand = myCommand;
+                    oleDbDataAdapter2.SelectCommand = myCommand;
                     DataSet ds2 = new DataSet();
-                    oleDbDataAdapter1.Fill(ds2);
+                    oleDbDataAdapter2.Fill(ds2);
 
                     dataGridView2.DataSource = ds2.Tables[0];
 
                 }
                 catch (Exception)
                 { }
-                oleDbConnection1.Close();
+                oleDbConnection2.Close();
             }
         }
     }

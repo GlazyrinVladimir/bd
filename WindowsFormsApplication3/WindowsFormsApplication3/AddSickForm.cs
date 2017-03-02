@@ -113,7 +113,8 @@ namespace WindowsFormsApplication3
             Bitmap image; //Bitmap для открываемого изображения
             try
             {
-                image = new Bitmap(path);
+                path = System.IO.Directory.GetCurrentDirectory() + path;
+                image = new Bitmap(@path);
                 pictureBox1.Image = image;
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBox1.Invalidate();
@@ -127,6 +128,16 @@ namespace WindowsFormsApplication3
             openFileDialog1.ShowDialog();
             filePath = openFileDialog1.FileName;
             loadPicture(openFileDialog1.FileName);
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddSickForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -36,11 +36,11 @@
             this.addButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.oleDbInsertCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbUpdateCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
-            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.SuspendLayout();
             // 
             // sickComboBox
@@ -102,17 +102,22 @@
             this.oleDbSelectCommand1.CommandText = "SELECT        Больные.*\r\nFROM            Больные";
             this.oleDbSelectCommand1.Connection = this.oleDbConnection1;
             // 
+            // oleDbConnection1
+            // 
+            this.oleDbConnection1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\4.2.accdb";
+            // 
             // oleDbInsertCommand1
             // 
             this.oleDbInsertCommand1.CommandText = "INSERT INTO `Больные` (`Фамилия`, `Имя`, `Отчество`, `Номер паспорта`, `Серия пас" +
-    "порта`) VALUES (?, ?, ?, ?, ?)";
+    "порта`, `фото`) VALUES (?, ?, ?, ?, ?, ?)";
             this.oleDbInsertCommand1.Connection = this.oleDbConnection1;
             this.oleDbInsertCommand1.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
             new System.Data.OleDb.OleDbParameter("Фамилия", System.Data.OleDb.OleDbType.VarWChar, 0, "Фамилия"),
             new System.Data.OleDb.OleDbParameter("Имя", System.Data.OleDb.OleDbType.VarWChar, 0, "Имя"),
             new System.Data.OleDb.OleDbParameter("Отчество", System.Data.OleDb.OleDbType.VarWChar, 0, "Отчество"),
-            new System.Data.OleDb.OleDbParameter("Номер_паспорта", System.Data.OleDb.OleDbType.VarWChar, 0, "Номер паспорта"),
-            new System.Data.OleDb.OleDbParameter("Серия_паспорта", System.Data.OleDb.OleDbType.VarWChar, 0, "Серия паспорта")});
+            new System.Data.OleDb.OleDbParameter("Номер_паспорта", System.Data.OleDb.OleDbType.Integer, 0, "Номер паспорта"),
+            new System.Data.OleDb.OleDbParameter("Серия_паспорта", System.Data.OleDb.OleDbType.Integer, 0, "Серия паспорта"),
+            new System.Data.OleDb.OleDbParameter("фото", System.Data.OleDb.OleDbType.VarWChar, 0, "фото")});
             // 
             // oleDbUpdateCommand1
             // 
@@ -122,8 +127,9 @@
             new System.Data.OleDb.OleDbParameter("Фамилия", System.Data.OleDb.OleDbType.VarWChar, 0, "Фамилия"),
             new System.Data.OleDb.OleDbParameter("Имя", System.Data.OleDb.OleDbType.VarWChar, 0, "Имя"),
             new System.Data.OleDb.OleDbParameter("Отчество", System.Data.OleDb.OleDbType.VarWChar, 0, "Отчество"),
-            new System.Data.OleDb.OleDbParameter("Номер_паспорта", System.Data.OleDb.OleDbType.VarWChar, 0, "Номер паспорта"),
-            new System.Data.OleDb.OleDbParameter("Серия_паспорта", System.Data.OleDb.OleDbType.VarWChar, 0, "Серия паспорта"),
+            new System.Data.OleDb.OleDbParameter("Номер_паспорта", System.Data.OleDb.OleDbType.Integer, 0, "Номер паспорта"),
+            new System.Data.OleDb.OleDbParameter("Серия_паспорта", System.Data.OleDb.OleDbType.Integer, 0, "Серия паспорта"),
+            new System.Data.OleDb.OleDbParameter("фото", System.Data.OleDb.OleDbType.VarWChar, 0, "фото"),
             new System.Data.OleDb.OleDbParameter("Original_Код", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_Фамилия", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_Фамилия", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Фамилия", System.Data.DataRowVersion.Original, null),
@@ -132,9 +138,11 @@
             new System.Data.OleDb.OleDbParameter("IsNull_Отчество", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_Отчество", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Отчество", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_Номер_паспорта", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер паспорта", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Номер_паспорта", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Номер паспорта", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("Original_Номер_паспорта", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Номер паспорта", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_Серия_паспорта", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Серия паспорта", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Серия_паспорта", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Серия паспорта", System.Data.DataRowVersion.Original, null)});
+            new System.Data.OleDb.OleDbParameter("Original_Серия_паспорта", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Серия паспорта", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_фото", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "фото", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_фото", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "фото", System.Data.DataRowVersion.Original, null)});
             // 
             // oleDbDeleteCommand1
             // 
@@ -149,9 +157,11 @@
             new System.Data.OleDb.OleDbParameter("IsNull_Отчество", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", System.Data.DataRowVersion.Original, true, null),
             new System.Data.OleDb.OleDbParameter("Original_Отчество", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Отчество", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_Номер_паспорта", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер паспорта", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Номер_паспорта", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Номер паспорта", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("Original_Номер_паспорта", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Номер паспорта", System.Data.DataRowVersion.Original, null),
             new System.Data.OleDb.OleDbParameter("IsNull_Серия_паспорта", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Серия паспорта", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Серия_паспорта", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Серия паспорта", System.Data.DataRowVersion.Original, null)});
+            new System.Data.OleDb.OleDbParameter("Original_Серия_паспорта", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Серия паспорта", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_фото", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "фото", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_фото", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "фото", System.Data.DataRowVersion.Original, null)});
             // 
             // oleDbDataAdapter1
             // 
@@ -165,13 +175,9 @@
                         new System.Data.Common.DataColumnMapping("Имя", "Имя"),
                         new System.Data.Common.DataColumnMapping("Отчество", "Отчество"),
                         new System.Data.Common.DataColumnMapping("Номер паспорта", "Номер паспорта"),
-                        new System.Data.Common.DataColumnMapping("Серия паспорта", "Серия паспорта")})});
+                        new System.Data.Common.DataColumnMapping("Серия паспорта", "Серия паспорта"),
+                        new System.Data.Common.DataColumnMapping("фото", "фото")})});
             this.oleDbDataAdapter1.UpdateCommand = this.oleDbUpdateCommand1;
-            // 
-            // oleDbConnection1
-            // 
-            this.oleDbConnection1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\4.2.accdb;Persist S" +
-    "ecurity Info=True";
             // 
             // AddUsage
             // 
@@ -185,7 +191,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.sickComboBox);
             this.Name = "AddUsage";
-            this.Text = "AddUsage";
+            this.Text = "Добавить назначение";
             this.ResumeLayout(false);
             this.PerformLayout();
 

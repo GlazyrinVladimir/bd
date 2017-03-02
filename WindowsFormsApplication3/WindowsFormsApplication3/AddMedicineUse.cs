@@ -18,9 +18,10 @@ namespace WindowsFormsApplication3
             InitializeComponent();
             LoadBoxes();
         }
-
+        OleDbConnection con;
         public void SetBoxes(string s1, string s2, string s3)
         {
+
             usageComboBox.Text = s1;
             medicineComboBox.Text = s2;
             periodTextBox.Text = s3;
@@ -54,13 +55,14 @@ namespace WindowsFormsApplication3
 
         void LoadBoxes()
         {
+            oleDbConnection1.Open();
             DataTable tbl = new DataTable();
             oleDbDataAdapter1.Fill(tbl);
             medicineComboBox.DataSource = tbl;
             medicineComboBox.DisplayMember = "Название";// столбец для отображения
             medicineComboBox.ValueMember = "Код";//столбец с id
             medicineComboBox.Text = "";
-
+            oleDbConnection1.Close();
             DataTable tbl2 = new DataTable();
             oleDbDataAdapter2.Fill(tbl2);
             usageComboBox.DataSource = tbl2;

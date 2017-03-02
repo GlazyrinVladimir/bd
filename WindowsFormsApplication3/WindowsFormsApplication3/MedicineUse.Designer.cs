@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicineUse));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
-            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
-            this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
-            this.oleDbDeleteCommand = new System.Data.OleDb.OleDbCommand();
-            this.oleDbInsertCommand = new System.Data.OleDb.OleDbCommand();
-            this.oleDbUpdateCommand = new System.Data.OleDb.OleDbCommand();
             this.sicksButton = new System.Windows.Forms.Button();
             this.MedicineButton = new System.Windows.Forms.Button();
             this.useButton = new System.Windows.Forms.Button();
@@ -49,6 +43,18 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
+            this.oleDbInsertCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbUpdateCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
+            this.oleDbSelectCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbInsertCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbUpdateCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDeleteCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDataAdapter2 = new System.Data.OleDb.OleDbDataAdapter();
+            this.oleDbConnection2 = new System.Data.OleDb.OleDbConnection();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -60,67 +66,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(428, 224);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // oleDbSelectCommand1
-            // 
-            this.oleDbSelectCommand1.CommandText = resources.GetString("oleDbSelectCommand1.CommandText");
-            this.oleDbSelectCommand1.Connection = this.oleDbConnection1;
-            // 
-            // oleDbConnection1
-            // 
-            this.oleDbConnection1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\бд гоша\\4.2.accdb\"";
-            // 
-            // oleDbDataAdapter1
-            // 
-            this.oleDbDataAdapter1.DeleteCommand = this.oleDbDeleteCommand;
-            this.oleDbDataAdapter1.InsertCommand = this.oleDbInsertCommand;
-            this.oleDbDataAdapter1.SelectCommand = this.oleDbSelectCommand1;
-            this.oleDbDataAdapter1.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
-            new System.Data.Common.DataTableMapping("Table", "НазначениеЛекарств", new System.Data.Common.DataColumnMapping[] {
-                        new System.Data.Common.DataColumnMapping("Код", "Код"),
-                        new System.Data.Common.DataColumnMapping("idНазначения", "idНазначения"),
-                        new System.Data.Common.DataColumnMapping("idЛекарств", "idЛекарств"),
-                        new System.Data.Common.DataColumnMapping("Период", "Период")})});
-            this.oleDbDataAdapter1.UpdateCommand = this.oleDbUpdateCommand;
-            // 
-            // oleDbDeleteCommand
-            // 
-            this.oleDbDeleteCommand.CommandText = resources.GetString("oleDbDeleteCommand.CommandText");
-            this.oleDbDeleteCommand.Connection = this.oleDbConnection1;
-            this.oleDbDeleteCommand.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
-            new System.Data.OleDb.OleDbParameter("Original_Код", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, null)});
-            // 
-            // oleDbInsertCommand
-            // 
-            this.oleDbInsertCommand.CommandText = "INSERT INTO `НазначениеЛекарств` (`idНазначения`, `idЛекарств`, `Период`) VALUES " +
-    "(?, ?, ?)";
-            this.oleDbInsertCommand.Connection = this.oleDbConnection1;
-            this.oleDbInsertCommand.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
-            new System.Data.OleDb.OleDbParameter("idНазначения", System.Data.OleDb.OleDbType.Integer, 0, "idНазначения"),
-            new System.Data.OleDb.OleDbParameter("idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, "idЛекарств"),
-            new System.Data.OleDb.OleDbParameter("Период", System.Data.OleDb.OleDbType.Integer, 0, "Период")});
-            // 
-            // oleDbUpdateCommand
-            // 
-            this.oleDbUpdateCommand.CommandText = resources.GetString("oleDbUpdateCommand.CommandText");
-            this.oleDbUpdateCommand.Connection = this.oleDbConnection1;
-            this.oleDbUpdateCommand.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
-            new System.Data.OleDb.OleDbParameter("idНазначения", System.Data.OleDb.OleDbType.Integer, 0, "idНазначения"),
-            new System.Data.OleDb.OleDbParameter("idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, "idЛекарств"),
-            new System.Data.OleDb.OleDbParameter("Период", System.Data.OleDb.OleDbType.Integer, 0, "Период"),
-            new System.Data.OleDb.OleDbParameter("Original_Код", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, null)});
             // 
             // sicksButton
             // 
@@ -245,6 +190,128 @@
             this.textBox1.Size = new System.Drawing.Size(116, 20);
             this.textBox1.TabIndex = 13;
             // 
+            // oleDbSelectCommand1
+            // 
+            this.oleDbSelectCommand1.CommandText = "SELECT        НазначениеЛекарств.*\r\nFROM            НазначениеЛекарств";
+            this.oleDbSelectCommand1.Connection = this.oleDbConnection1;
+            // 
+            // oleDbConnection1
+            // 
+            this.oleDbConnection1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\4.2.accdb";
+            // 
+            // oleDbInsertCommand1
+            // 
+            this.oleDbInsertCommand1.CommandText = "INSERT INTO `НазначениеЛекарств` (`idНазначения`, `idЛекарств`, `Период`) VALUES " +
+    "(?, ?, ?)";
+            this.oleDbInsertCommand1.Connection = this.oleDbConnection1;
+            this.oleDbInsertCommand1.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
+            new System.Data.OleDb.OleDbParameter("idНазначения", System.Data.OleDb.OleDbType.Integer, 0, "idНазначения"),
+            new System.Data.OleDb.OleDbParameter("idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, "idЛекарств"),
+            new System.Data.OleDb.OleDbParameter("Период", System.Data.OleDb.OleDbType.Integer, 0, "Период")});
+            // 
+            // oleDbUpdateCommand1
+            // 
+            this.oleDbUpdateCommand1.CommandText = resources.GetString("oleDbUpdateCommand1.CommandText");
+            this.oleDbUpdateCommand1.Connection = this.oleDbConnection1;
+            this.oleDbUpdateCommand1.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
+            new System.Data.OleDb.OleDbParameter("idНазначения", System.Data.OleDb.OleDbType.Integer, 0, "idНазначения"),
+            new System.Data.OleDb.OleDbParameter("idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, "idЛекарств"),
+            new System.Data.OleDb.OleDbParameter("Период", System.Data.OleDb.OleDbType.Integer, 0, "Период"),
+            new System.Data.OleDb.OleDbParameter("Original_Код", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, null)});
+            // 
+            // oleDbDeleteCommand1
+            // 
+            this.oleDbDeleteCommand1.CommandText = resources.GetString("oleDbDeleteCommand1.CommandText");
+            this.oleDbDeleteCommand1.Connection = this.oleDbConnection1;
+            this.oleDbDeleteCommand1.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
+            new System.Data.OleDb.OleDbParameter("Original_Код", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, null)});
+            // 
+            // oleDbDataAdapter1
+            // 
+            this.oleDbDataAdapter1.DeleteCommand = this.oleDbDeleteCommand1;
+            this.oleDbDataAdapter1.InsertCommand = this.oleDbInsertCommand1;
+            this.oleDbDataAdapter1.SelectCommand = this.oleDbSelectCommand1;
+            this.oleDbDataAdapter1.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "НазначениеЛекарств", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("Код", "Код"),
+                        new System.Data.Common.DataColumnMapping("idНазначения", "idНазначения"),
+                        new System.Data.Common.DataColumnMapping("idЛекарств", "idЛекарств"),
+                        new System.Data.Common.DataColumnMapping("Период", "Период")})});
+            this.oleDbDataAdapter1.UpdateCommand = this.oleDbUpdateCommand1;
+            // 
+            // oleDbSelectCommand2
+            // 
+            this.oleDbSelectCommand2.CommandText = "SELECT        НазначениеЛекарств.*\r\nFROM            НазначениеЛекарств";
+            this.oleDbSelectCommand2.Connection = this.oleDbConnection2;
+            // 
+            // oleDbInsertCommand2
+            // 
+            this.oleDbInsertCommand2.CommandText = "INSERT INTO `НазначениеЛекарств` (`idНазначения`, `idЛекарств`, `Период`) VALUES " +
+    "(?, ?, ?)";
+            this.oleDbInsertCommand2.Connection = this.oleDbConnection2;
+            this.oleDbInsertCommand2.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
+            new System.Data.OleDb.OleDbParameter("idНазначения", System.Data.OleDb.OleDbType.Integer, 0, "idНазначения"),
+            new System.Data.OleDb.OleDbParameter("idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, "idЛекарств"),
+            new System.Data.OleDb.OleDbParameter("Период", System.Data.OleDb.OleDbType.Integer, 0, "Период")});
+            // 
+            // oleDbUpdateCommand2
+            // 
+            this.oleDbUpdateCommand2.CommandText = resources.GetString("oleDbUpdateCommand2.CommandText");
+            this.oleDbUpdateCommand2.Connection = this.oleDbConnection2;
+            this.oleDbUpdateCommand2.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
+            new System.Data.OleDb.OleDbParameter("idНазначения", System.Data.OleDb.OleDbType.Integer, 0, "idНазначения"),
+            new System.Data.OleDb.OleDbParameter("idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, "idЛекарств"),
+            new System.Data.OleDb.OleDbParameter("Период", System.Data.OleDb.OleDbType.Integer, 0, "Период"),
+            new System.Data.OleDb.OleDbParameter("Original_Код", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, null)});
+            // 
+            // oleDbDeleteCommand2
+            // 
+            this.oleDbDeleteCommand2.CommandText = resources.GetString("oleDbDeleteCommand2.CommandText");
+            this.oleDbDeleteCommand2.Connection = this.oleDbConnection2;
+            this.oleDbDeleteCommand2.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
+            new System.Data.OleDb.OleDbParameter("Original_Код", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Код", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_idНазначения", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idНазначения", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_idЛекарств", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "idЛекарств", System.Data.DataRowVersion.Original, null),
+            new System.Data.OleDb.OleDbParameter("IsNull_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, true, null),
+            new System.Data.OleDb.OleDbParameter("Original_Период", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Период", System.Data.DataRowVersion.Original, null)});
+            // 
+            // oleDbDataAdapter2
+            // 
+            this.oleDbDataAdapter2.DeleteCommand = this.oleDbDeleteCommand2;
+            this.oleDbDataAdapter2.InsertCommand = this.oleDbInsertCommand2;
+            this.oleDbDataAdapter2.SelectCommand = this.oleDbSelectCommand2;
+            this.oleDbDataAdapter2.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "НазначениеЛекарств", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("Код", "Код"),
+                        new System.Data.Common.DataColumnMapping("idНазначения", "idНазначения"),
+                        new System.Data.Common.DataColumnMapping("idЛекарств", "idЛекарств"),
+                        new System.Data.Common.DataColumnMapping("Период", "Период")})});
+            this.oleDbDataAdapter2.UpdateCommand = this.oleDbUpdateCommand2;
+            // 
+            // oleDbConnection2
+            // 
+            this.oleDbConnection2.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\4.2.accdb";
+            // 
             // MedicineUse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,7 +332,7 @@
             this.Controls.Add(this.sicksButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MedicineUse";
-            this.Text = "Form2";
+            this.Text = "Назначение лекарства";
             this.Load += new System.EventHandler(this.MedicineUse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -277,9 +344,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Data.OleDb.OleDbCommand oleDbSelectCommand1;
-        private System.Data.OleDb.OleDbConnection oleDbConnection1;
-        private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter1;
         private System.Windows.Forms.Button sicksButton;
         private System.Windows.Forms.Button MedicineButton;
         private System.Windows.Forms.Button useButton;
@@ -288,13 +352,22 @@
         private System.Windows.Forms.Button avgButton;
         private System.Windows.Forms.TextBox operationTextBox;
         private System.Windows.Forms.Button AddButton;
-        private System.Data.OleDb.OleDbCommand oleDbDeleteCommand;
-        private System.Data.OleDb.OleDbCommand oleDbInsertCommand;
-        private System.Data.OleDb.OleDbCommand oleDbUpdateCommand;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Data.OleDb.OleDbCommand oleDbSelectCommand1;
+        private System.Data.OleDb.OleDbCommand oleDbInsertCommand1;
+        private System.Data.OleDb.OleDbCommand oleDbUpdateCommand1;
+        private System.Data.OleDb.OleDbCommand oleDbDeleteCommand1;
+        private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter1;
+        private System.Data.OleDb.OleDbConnection oleDbConnection1;
+        private System.Data.OleDb.OleDbCommand oleDbSelectCommand2;
+        private System.Data.OleDb.OleDbConnection oleDbConnection2;
+        private System.Data.OleDb.OleDbCommand oleDbInsertCommand2;
+        private System.Data.OleDb.OleDbCommand oleDbUpdateCommand2;
+        private System.Data.OleDb.OleDbCommand oleDbDeleteCommand2;
+        private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter2;
     }
 }

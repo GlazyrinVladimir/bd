@@ -818,7 +818,7 @@ namespace WindowsFormsApplication3._4_2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApplication3.Properties.Settings.Default._4_2ConnectionString1;
+            this._connection.ConnectionString = global::WindowsFormsApplication3.Properties.Settings.Default._4_2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -827,7 +827,7 @@ namespace WindowsFormsApplication3._4_2DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Фамилия, Имя, Отчество FROM Больные\r\nWHERE (Фамилия = ?)";
+            this._commandCollection[0].CommandText = "SELECT Фамилия, Имя, Отчество FROM Больные WHERE (Фамилия = ?)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
         }
